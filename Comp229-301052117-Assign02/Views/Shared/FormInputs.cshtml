@@ -1,0 +1,59 @@
+﻿@model Comp229_301052117_Assign02.Models.Recipes
+
+
+<div class="panel-heading text-center"><h4>Recipe </h4></div>
+<div class="panel-body">
+    <form id="ID" class="p-a-1" asp-action="InsertPage" method="post">
+        <div asp-validation-summary="All" class="alert-danger"></div>@*div for input errors. Validation*@
+        @*<input type="hidden" asp-for="ID" />*@
+        <div class="form-group">
+            <label>Created By</label>
+            <input class="form-control" asp-for="Author" />
+        </div>
+        <div class="form-group">
+            <label>Servings </label>
+            <select class="form-control" asp-for="Servings">
+                <option value="">Choose an option</option>
+                <option value="1 - 5">1 - 5</option>
+                <option value="6 - 10">6 - 10</option>
+                <option value="11 - 15">11 - 15</option>
+                <option value="16 - 20">16 - 20</option>
+                <option value="21 - 25">21 - 25</option>
+                <option value="26 - 30">26 -30</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Dish Name</label>
+            <input class="form-control" asp-for="DishName" />
+        </div>
+        <div class="form-group">
+            <label>Ingredients:</label>
+            <textarea rows="3" class="form-control" asp-for="Ingredients"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Description:</label>
+            <textarea rows="3" class="form-control" asp-for="Description"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <select class="form-control" asp-for="Category">
+                <option value="">Choose an option</option>
+                <option value="african">African</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="indian">Indian</option>
+                <option value="carribean">Carribean</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" id="submitButton" type="submit">
+                Save Recipe
+            </button>
+            <button class="btn btn-danger" id="cancelButton" asp-action="Index">
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>

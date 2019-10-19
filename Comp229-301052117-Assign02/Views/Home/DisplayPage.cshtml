@@ -1,0 +1,26 @@
+﻿@model Comp229_301052117_Assign02.Models.Recipes
+
+<img alt="Image of food" />
+<div>
+   
+    @if (Model != null)
+    {
+    <div class="container">
+        <h4>Dish Name</h4>
+        <p>@Model.DishName</p>
+        <h4>Author</h4>
+        <p>@Model.Author </p>
+        <h4>Ingredients</h4>
+        <p>@Model.Ingredients</p>
+        <h4>Description</h4>
+        <p>@Model.Description</p>
+        <h4>Category</h4>
+        <p>@Model.Category</p>
+        <h4>Servings</h4>
+        <p>@Model.Servings</p>
+
+    </div>
+    }
+</div>
+
+

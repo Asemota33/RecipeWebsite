@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Comp229_301052117_Assign02.Models.Recipes>
+
+
+
+<div class="panel-body">
+    <h2>Recipe List</h2>
+    <table class="table table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Dish Name</th>
+                <th>Category</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Comp229_301052117_Assign02.Models.Recipes r in Model)
+            {
+            <tr>
+                <td><a asp-action="DisplayPage" asp-route-dishName="@r.DishName">@r.DishName</a></td>
+                <td>@r.Category</td>
+                <td>@r.Author</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
